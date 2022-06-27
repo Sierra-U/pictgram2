@@ -28,7 +28,7 @@ public class User extends AbstractEntity implements UserDetails, UserInf {
 
 	public enum Authority {
 		ROLE_USER, ROLE_ADMIN
-	}
+	};
 
 	public User() {
 		super();

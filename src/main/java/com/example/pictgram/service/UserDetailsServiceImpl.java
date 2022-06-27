@@ -23,12 +23,12 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
 		log.debug("username={}", username);
-		
+
 		if (username == null || "".equals(username)) {
 			throw new UsernameNotFoundException("Username is empty");
 		}
 		User entity = repository.findByUsername(username);
-		
+
 		return entity;
 	}
 
